@@ -15,6 +15,8 @@ A Job consists of a payload and an execute method to run the job. HummingbirdJob
 Before you can start adding or processing jobs you need to setup a Jobs queue to push jobs onto. Below we create a job queue stored in local memory that will process four jobs concurrently.
 
 ```swift
+import Jobs
+
 let jobQueue = JobQueue(.memory, numWorkers: 4, logger: logger)
 ```
 
